@@ -16,9 +16,13 @@ Our friend Beks has been tasked by Alphabet Soup to create a model that can pred
 - 'ASK_AMT' and 'STATUS' are not considered features or targets, and thus were removed from consideration in the model. Additionally, once the categorical variables were encoded in the dataset, we removed 'SPECIAL_CONSIDERATIONS_N' since it provided the same information as 'SPECIAL_CONSIDERATIONS_Y'.
 
 ### Compiling, Training, and Evaluating the Model
-- How many neurons, layers and activation functions did you select for your neural network model? Why?
-- Were you able to achieve the target model performance?
-- What steps did you take to try and increase model performance?
+- For this neural netkwork model, we selected 3 layers, with 80, 50, and 30 nodes respectively, for a total of 150 nodes. Initially, we determined to use 2 layers of 80 and 50 nodes each, since that was 3 times as many nodes as there were features in the model. However, while optimizing the model, we added another layer of 30 nodes in an attempt to increase the model's accuracy. ![Nodes and Layers](Images/neural_nodes.PNG)
+- Unfortunately, we were unable to achieve the target accuracy of 75%. The closest we were able to get was ~71.4%, as seen below: ![Model Loss and Accuracy](Images/loss-accuracy.PNG)
+- In order to increase model performance, we changed many things about the model, including:
+  - Adding a third hidden layer of 30 nodes
+  - Dropping 'ASK_AMT', 'STATUS', and 'SPECIAL_CONSIDERATIONS_N' from the dataframe
+  - Replacing any 'APPLICATION_TYPE' with less than 700 counts with 'Other', rather than with less than 1000 counts
+  - Changing the activation function of the hidden layers from 'relu' to 'sigmoid'
 
 ## Summary
 Summarize the overall results of the deep learning model
