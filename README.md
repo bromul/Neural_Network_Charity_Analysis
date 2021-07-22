@@ -2,7 +2,11 @@
 
 ## Overview
 
+This project sought to create a neural network to create a binary classifier that is capable of predicting whether applicants to Alphabet Soup's grant program will be successful if funded.
+
 ### Purpose
+
+Our friend Beks has been tasked by Alphabet Soup to create a model that can predict the success of applicants to Alphabet Soup's grant program that receive funding.  
 
 ## Results
 
