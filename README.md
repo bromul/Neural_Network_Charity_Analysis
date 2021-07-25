@@ -17,7 +17,8 @@ Our friend Beks has been tasked by Alphabet Soup to create a model that can pred
 
 ### Compiling, Training, and Evaluating the Model
 - For this neural netkwork model, we selected 3 layers, with 80, 50, and 30 nodes respectively, for a total of 150 nodes. Initially, we determined to use 2 layers of 80 and 50 nodes each, since that was 3 times as many nodes as there were features in the model. However, while optimizing the model, we added another layer of 30 nodes in an attempt to increase the model's accuracy. ![Nodes and Layers](Images/neural_nodes.PNG)
-- Unfortunately, we were unable to achieve the target accuracy of 75%. The closest we were able to get was ~71.4%, as seen below: ![Model Loss and Accuracy](Images/loss-accuracy.PNG)
+- Unfortunately, we were unable to achieve the target accuracy of 75%. The closest we were able to get was ~71.4%, as seen below: 
+![Model Loss and Accuracy](Images/loss-accuracy.PNG)
 - In order to increase model performance, we changed many things about the model, including:
   - Adding a third hidden layer of 30 nodes
   - Dropping 'ASK_AMT', 'STATUS', and 'SPECIAL_CONSIDERATIONS_N' from the dataframe
@@ -25,7 +26,12 @@ Our friend Beks has been tasked by Alphabet Soup to create a model that can pred
   - Changing the activation function of the hidden layers from 'relu' to 'sigmoid'
 
 ## Summary
-Summarize the overall results of the deep learning model
+Our model was able to accurately predict the success of an applicant about 71.4% of the time. While this did not reach the 75% threshold we were working toward, we still believe our changes are a vast improvement on the initial model, where the accuracy was only around 53.3%:
+
+![Unoptimized Model Loss and Accuracy](Images/loss-accuracy-original.PNG)
+
 
 ### Recommendations
-Recommend for how a different model could solve this classification problem. Explain your recommendation.
+Neural networks are not the only models that could solve a classification model such as this one. We could also use a random forest classifier to create a robust model that could predict the success of an applicant to Alphabet Soup's grant program. By compiling many decision trees, we can more accurately make these predictions without worrying too much about overfitting the data, like we would with a single decision tree. 
+
+Alternatively, since we are attempting to classify and predict whether applicants will be successful with the funding Alphabet Soup gives them (a binary classification), the logistic regression classifier could be a fantastic choice to create another model. 
