@@ -34,4 +34,4 @@ Our model was able to accurately predict the success of an applicant about 71.4%
 ### Recommendations
 Neural networks are not the only models that could solve a classification model such as this one. We could also use a random forest classifier to create a robust model that could predict the success of an applicant to Alphabet Soup's grant program. By compiling many decision trees, we can more accurately make these predictions without worrying too much about overfitting the data, like we would with a single decision tree. 
 
-Alternatively, since we are attempting to classify and predict whether applicants will be successful with the funding Alphabet Soup gives them (a binary classification), the logistic regression classifier could be a fantastic choice to create another model. 
+Alternatively, since we are attempting to classify and predict whether applicants will be successful with the funding Alphabet Soup gives them (a binary classification), the logistic regression classifier could be a fantastic choice to create another model, due to its ability to create an assign specific probabilities to each point of supplied data.
